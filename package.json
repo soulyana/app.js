@@ -1,0 +1,25 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soulyana/app.js.git"
+  },
+  "author": "Soulyana Lakew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soulyana/app.js/issues"
+  },
+  "homepage": "https://github.com/soulyana/app.js#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "debug": "^4.0.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.1"
+  }
+}
