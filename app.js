@@ -14,9 +14,11 @@ app.use('/js', express.static(path.join(__dirname, '/node_modules/popper/')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
 app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
+app.set('views', './src/views');
+app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/views/', '/index.html')); // location of current exutable
+  res.render('index'); // location of current exutable
 });
 
 app.listen(port, () => {
