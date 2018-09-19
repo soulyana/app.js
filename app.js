@@ -18,7 +18,7 @@ app.set('views', './src/views');
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-  res.render('index'); // location of current exutable
+  res.render('index', { list: ['a', 'b'] }); // location of current exutable
 });
 
 app.listen(port, () => {
