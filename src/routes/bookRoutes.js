@@ -1,4 +1,6 @@
 const express = require('express');
+const sql = require('mssql');
+// const debug = require('debug')('app:bookRoutes');
 
 const bookRouter = express.Router();
 
@@ -40,17 +42,23 @@ function router(nav) {
       author: 'Kenneth Grahame',
       read: false
     }
-  ];    
+  ];
   bookRouter.route('/')
     .get((req, res) => {
-      res.render(
-        'bookListView',
-        {
-          nav,
-          title: 'Library',
-          books
-        }
-      );
+      (async function query() {
+        const request = new sql.Request();
+
+        const result = await request.query('select * from books');
+        // debug(result);
+        res.render(
+          'bookListView',
+          {
+            nav,
+            title: 'Library',
+            books: result.recordset
+          }
+        );
+      }());
     });
 
   bookRouter.route('/:id')

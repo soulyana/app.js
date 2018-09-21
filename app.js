@@ -4,10 +4,23 @@ const chalk = require('chalk');
 const debug = require('debug');
 const morgan = require('morgan');
 const path = require('path');
+const sql = require('mssql');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+const config = {
+  user: 'library',
+  password: 'soullibrary1!',
+  server: 'soulpslibrary.database.windows.net',
+  database: 'PSLibrary',
+
+  options: {
+    encrypt: true // Use this if you're on Windows Azure
+  }
+};
+
+sql.connect(config).catch(err => debug(err));
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/'))); // setting up static directory & locatin
