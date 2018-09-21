@@ -10,8 +10,8 @@ const port = process.env.PORT || 3000;
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/'))); // setting up static directory & locatin
-app.use('/js', express.static(path.join(__dirname, '/node_modules/popper/')));
-app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
+app.use('/js', express.static(path.join(__dirname, '/node_modules/popper')));
+app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery')));
 app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 app.set('views', './src/views');
