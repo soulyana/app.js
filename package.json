@@ -25,10 +25,11 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
+    "mongodb": "^3.1.6",
     "morgan": "^1.9.1",
     "mssql": "^4.2.1",
     "nodemon": "^1.18.4",
-    "popper": "^1.0.1",
+    "popper": "~^1.0.1",
     "pug": "^2.0.3"
   },
   "devDependencies": {
