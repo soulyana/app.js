@@ -90,7 +90,7 @@ function router(nav) {
         {
           nav,
           title: 'Library',
-          book: recordset[0]
+          book: req.book
         }
       );
     });
