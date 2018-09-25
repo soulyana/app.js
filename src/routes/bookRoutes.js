@@ -17,6 +17,44 @@ const config = {
 
 sql.connect(config).catch(err => debug(err));
 
+const books = [
+  {
+    title: 'War and Peace',
+    genre: 'Historical Fictions',
+    author: 'Lev Nikolayevich Tolstoy',
+    read: false
+  },
+  {
+    title: 'Les Miserables',
+    genre: 'Historical Fictions',
+    author: 'Victor Hugo',
+    read: false
+  },
+  {
+    title: 'The Time Machine',
+    genre: 'Science Fictions',
+    author: 'H. G. Wells',
+    read: false
+  },
+  {
+    title: 'A Journey into the Center of the Earth',
+    genre: 'Science Fictions',
+    author: 'Jules Vener',
+    read: false
+  },
+  {
+    title: 'The Dark World',
+    genre: 'Fantasy',
+    author: 'Henry Kuttner',
+    read: false
+  },
+  {
+    title: 'The Wind in the Willows',
+    genre: 'Fantasy',
+    author: 'Kenneth Grahame',
+    read: false
+  }
+];
 function router(nav) {
   bookRouter.route('/')
     .get((req, res) => {
